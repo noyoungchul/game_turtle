@@ -11,14 +11,19 @@ player = turtle.Turtle()
 player.shape("turtle")
 player.color("blue")
 player.penup()
-player.goto(0, 0)
+player.goto(200, 0) #200으로 위치 이동
 
 # 추적자 거북이
 chaser = turtle.Turtle()
 chaser.shape("turtle")
 chaser.color("red")
 chaser.penup()
-chaser.goto(-200, 0)
+chaser.goto(-300, 0) #-300으로 위치 이동
+
+# 추가항목! 추적자가 플레이어 쪽으로 이동하며 흔적 남김 
+chaser.pendown() 
+chaser.pensize(2) 
+chaser.color("red")
 
 # 플레이어 이동 함수
 def go_up():
